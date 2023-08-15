@@ -21,7 +21,7 @@ function Cart() {
                 {
                     cart.map((list)=>{
                         return <div id="cart-display">
-                                  <img src={list.img} id="cart-img" style={{width:"100%",marginTop:"2px"}} />
+                                  <img src={list.img} alt="img" id="cart-img" style={{width:"100%",marginTop:"2px"}} />
                                   <h3 style={{margin:"2px"}}>{list.name}</h3>
                                   <p style={{margin:"2px"}}>{list.price}</p>
                                   <p style={{marginTop:"4px",marginBottom:"0"}}>Quantity : {list.count}</p>

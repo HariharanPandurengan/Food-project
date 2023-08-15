@@ -25,7 +25,7 @@ function Navbar() {
                         <li className="nav-li"><Link className="nav-link" to="breakfast">Breakfast</Link></li>
                     </ul>
                     <div id="cartimgsection" style={{display:"flex",alignItems:"center",maxWidth:"50px",width:"100%"}}>
-                        <img src={cart} width="43%" height="10%" onClick={()=>navigate("cart")}/>
+                        <img src={cart} alt="img" width="43%" height="10%" onClick={()=>navigate("cart")}/>
                         <p>{cartCount}</p>
                     </div>
                 </div>

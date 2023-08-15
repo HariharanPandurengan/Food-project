@@ -18,15 +18,15 @@ function HomePage() {
                     <h3 id="homeInspiration" style={{fontSize:"25px",marginBottom:"20px",color:"white"}}>Inspiration For Your First Order</h3>
                     <div style={{maxWidth:"700px",width:"100%",display:"flex",justifyContent:"space-between"}}>
                         <div style={{width:"30%",textAlign:"center"}}>
-                            <Link to="biriyani"><img style={{width:"100%",borderRadius:"50%"}} src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png"></img></Link>
+                            <Link to="biriyani"><img style={{width:"100%",borderRadius:"50%"}} alt="img" src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png"></img></Link>
                             <p style={{color:"white",margin:"0"}}>Biriyani</p>
                         </div>
                         <div style={{width:"30%",textAlign:"center"}}>
-                            <Link to="pizza"><img style={{width:"100%",borderRadius:"50%"}} src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"></img></Link>
+                            <Link to="pizza"><img style={{width:"100%",borderRadius:"50%"}} alt="img" src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"></img></Link>
                             <p style={{color:"white",margin:"0"}}>Pizza</p>
                         </div>
                         <div style={{width:"30%",textAlign:"center"}}>
-                            <Link to="burger"><img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" style={{width:"100%",borderRadius:"50%"}}></img></Link>
+                            <Link to="burger"><img alt="img" src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" style={{width:"100%",borderRadius:"50%"}}></img></Link>
                             <p id="homePageBurger" style={{color:"white",margin:"0"}}>Burger</p>
                         </div>
                     </div>
