@@ -36,7 +36,7 @@ function Cart() {
             {cart.length !== 0 &&
                  <>
                     <div>Total Amount To Pay : {totalPrice} Rs</div>
-                    <div style={{display:"flex",justifyContent:"center",marginTop:"20px"}}>
+                    <div style={{display:"flex",justifyContent:"center",marginTop:"20px",marginBottom:"20px"}}>
                          <button onClick={()=>navigate("/pp")}>Order</button>
                          <button id="cartCancel" onClick={()=>dispatch(clearCart())}>Cancel</button>
                      </div>
