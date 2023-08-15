@@ -272,6 +272,9 @@ button:active{
   }
 
   @media only screen and (max-width: 950px) {
+    .nav-li:hover::after{
+        transform: scalex(0);
+    }
     #homepageEmptyDiv{
         max-width: 200px;
     }
