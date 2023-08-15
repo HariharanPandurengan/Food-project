@@ -91,6 +91,10 @@ h2{
     text-decoration:underline;
 }
 
+#breakfast1Div{
+  margin-left: 30px;
+}
+
 #homepage{
     background-image: url('https://cdn.pixabay.com/photo/2020/03/21/02/26/pizza-4952508_1280.jpg');
     background-attachment: fixed;
@@ -120,9 +124,7 @@ h2{
     width: 100%;
     max-height: 340px;
     height: 100%;
-    /* background-color: aquamarine; */
     text-align: center;
-    /* border: 1px solid black; */
     padding: 5px;
     box-shadow: 0px 0px 7px 1px black;
     border-radius: 10px;
@@ -447,4 +449,24 @@ button:active{
     #cart-img{
         height: 80px;
     }
+    #breakfastHeading{
+        font-size:20px;
+    }
+    #breakfast1Div{
+        margin-left: 5px;
+      }
+  }
+  @media only screen and (max-width: 315px) {
+    .food-maxwidth{
+        max-width: 250px;
+        width: 100%;
+        max-height: 330px;
+        height: 100vh;
+    }
+    #breakfastHeading{
+        font-size:15px;
+    }
+    #breakfast1Div{
+        margin-left: 0px;
+      }
   }

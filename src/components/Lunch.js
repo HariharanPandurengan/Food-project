@@ -12,8 +12,8 @@ function Lunch(props) {
 
     return ( 
         <section className="food-whole">
-        <div style={{display:"flex",alignItems:"center",marginBottom:"20px",marginLeft:"30px"}}>
-            <h2>Lunch</h2>
+        <div style={{display:"flex",alignItems:"center",marginBottom:"20px"}} id="breakfast1Div">
+            <h2 id="breakfastHeading">Lunch</h2>
             <input type="text" placeholder="Search" onChange={(event)=>{setSearchVal(event.target.value)}}/>
         </div>
         <div className="food-list">
