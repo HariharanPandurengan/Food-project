@@ -13,7 +13,8 @@ const userSlice = createSlice({
     reducers:{
         foodData:(state,action)=>{
                 
-                if(!(state.value.map(list=>list.name).includes(action.payload.name))){
+                if(!(state.value.map(list=>list.name).includes(action.payload.name)))
+                {
                     state.count += 1;
                     state.value.push(action.payload);
                     state.totalPriceArray.push(action.payload);
@@ -31,6 +32,7 @@ const userSlice = createSlice({
                                 return accumulator + foodObject.amount;
                               }, 0);
                         }
+                        return list;
                     })
                 }
         },
