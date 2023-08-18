@@ -8,8 +8,6 @@ const initialState = {
     count: 0,
 }
 
-let y;
-
 const userSlice = createSlice({
     name: "user",
     initialState,
@@ -49,6 +47,7 @@ const userSlice = createSlice({
                if(list.name.includes(action.payload)){
                  list.count -= 1
                }
+               return list
             })
             state.tp = state.value.reduce((a,b)=>{
                 return a += b.count * b.amount;
@@ -59,6 +58,7 @@ const userSlice = createSlice({
                 if(list.name.includes(action.payload)){
                   list.count += 1
                 }
+                return list
              })
              state.tp = state.value.reduce((a,b)=>{
                  return a += b.count * b.amount;
