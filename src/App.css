@@ -471,7 +471,7 @@ button:active{
         box-shadow:1px 2px rgb(104, 1, 1);
     }
     #cartPlusMinusButtonDiv{
-        margin-top: 0px;
+        margin-top: 5px;
     }
     #cart-display p{
        font-size: 10px;
