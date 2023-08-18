@@ -398,6 +398,9 @@ button:active{
     }
   }
   @media only screen and (max-width: 590px) {
+    #cart{
+        height: 150vh;
+    }
     #homepageEmptyDiv{
         max-width: 0px;
     }
