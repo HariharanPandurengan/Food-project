@@ -47,6 +47,8 @@ const userSlice = createSlice({
                }
                if(list.count === 0){
                 state.value = state.value.filter(obj => obj.name !== list.name);
+                console.log(state.value)
+                state.count = state.value.length;
                }
                return list
             })
