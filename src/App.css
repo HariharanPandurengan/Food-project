@@ -188,12 +188,12 @@ button:active{
 #cart-display{
     position: relative;
     max-height: 280px;
-    height: 100vh;
+    height: 100%;
     max-width: 200px;
     width: 100%;
     border: 1px solid black;
     padding: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: white;
 }
 
@@ -207,10 +207,7 @@ button:active{
     box-shadow:2px 2px rgb(104, 1, 1);
 }
 #cartPlusMinusButtonDiv{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
+    margin-top: 10px;
 }
 
 #cartCancel{
