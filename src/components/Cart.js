@@ -19,7 +19,8 @@ function Cart() {
             <div id="cart-maxwidth">
                 {
                     cart.map((list)=>{
-                        return <div id="cart-display">
+                        
+                        return  <div id="cart-display">
                                   <img src={list.img} alt="img" id="cart-img" style={{width:"100%",marginTop:"2px"}} />
                                   <h3 style={{margin:"2px"}}>{list.name}</h3>
                                   <p style={{margin:"2px"}}>{list.price}</p>

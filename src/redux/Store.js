@@ -2,8 +2,6 @@ import {configureStore,createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     value: [],
-    // totalPriceArray:[],
-    // totalPrice: 0,
     tp: 0,
     count: 0,
 }
@@ -16,7 +14,7 @@ const userSlice = createSlice({
                 
                 if(!(state.value.map(list=>list.name).includes(action.payload.name)))
                 {
-                    state.count += 1;
+                    state.count = state.value.length+1;
                     state.value.push(action.payload);
                     state.tp = state.value.reduce((a,b)=>{
                         return a += b.count * b.amount;
@@ -46,6 +44,9 @@ const userSlice = createSlice({
             state.value.map((list)=>{
                if(list.name.includes(action.payload)){
                  list.count -= 1
+               }
+               if(list.count === 0){
+                state.value = state.value.filter(obj => obj.name !== list.name);
                }
                return list
             })
