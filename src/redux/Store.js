@@ -2,10 +2,13 @@ import {configureStore,createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     value: [],
-    totalPriceArray:[],
-    totalPrice: 0,
+    // totalPriceArray:[],
+    // totalPrice: 0,
+    tp: 0,
     count: 0,
 }
+
+let y;
 
 const userSlice = createSlice({
     name: "user",
@@ -17,20 +20,18 @@ const userSlice = createSlice({
                 {
                     state.count += 1;
                     state.value.push(action.payload);
-                    state.totalPriceArray.push(action.payload);
-                    state.totalPrice = state.totalPriceArray.reduce((accumulator, foodObject) => {
-                        return accumulator + foodObject.amount;
-                      }, 0);
+                    state.tp = state.value.reduce((a,b)=>{
+                        return a += b.count * b.amount;
+                    },0)
                 }
                 else{
                     state.value.map(list=>{
                         if(list.name.includes(action.payload.name))
                         {
                             list.count += 1;
-                            state.totalPriceArray.push(action.payload);
-                            state.totalPrice = state.totalPriceArray.reduce((accumulator, foodObject) => {
-                                return accumulator + foodObject.amount;
-                              }, 0);
+                            state.tp = state.value.reduce((a,b)=>{
+                                return a += b.count * b.amount;
+                            },0)
                         }
                         return list;
                     })
@@ -41,11 +42,32 @@ const userSlice = createSlice({
             state.totalPrice = 0;
             state.totalPriceArray = [];
             state.value = [];
-        }
+        },
+        minusItem:(state,action)=>{
+            
+            state.value.map((list)=>{
+               if(list.name.includes(action.payload)){
+                 list.count -= 1
+               }
+            })
+            state.tp = state.value.reduce((a,b)=>{
+                return a += b.count * b.amount;
+            },0)
+        },
+        plusItem:(state,action)=>{
+            state.value.map((list)=>{
+                if(list.name.includes(action.payload)){
+                  list.count += 1
+                }
+             })
+             state.tp = state.value.reduce((a,b)=>{
+                 return a += b.count * b.amount;
+             },0)
+        },
     }
 });
 
-export const {foodData,clearCart} = userSlice.actions;
+export const {foodData,clearCart,minusItem,plusItem} = userSlice.actions;
 
 export const store =  configureStore({
     reducer: {

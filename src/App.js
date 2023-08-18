@@ -159,8 +159,6 @@ function App() {
         return list
       })
 
-      console.log(VBiriyani)
-
       let VPizza = Items.filter((list)=>
         list.varientName === "pizza"
       ).map((list)=>{

@@ -2,15 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import "../App.css"
-import { clearCart } from "../redux/Store";
+import { clearCart, minusItem, plusItem } from "../redux/Store";
 import { useNavigate } from "react-router-dom";
 
 
 function Cart() {
 
-    const cart = useSelector((state)=>state.user.value);
-    console.log(cart)
-    const totalPrice = useSelector((state)=>state.user.totalPrice);
+    const cart = useSelector((state)=>state.user.value);   
+    const tp = useSelector((state)=>state.user.tp);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -25,6 +24,10 @@ function Cart() {
                                   <h3 style={{margin:"2px"}}>{list.name}</h3>
                                   <p style={{margin:"2px"}}>{list.price}</p>
                                   <p style={{marginTop:"4px",marginBottom:"0"}}>Quantity : {list.count}</p>
+                                  <div id="cartPlusMinusButtonDiv">
+                                    <button id="cartPlusButton" className="cartPlusMinusButtons" onClick={()=>dispatch(plusItem(list.name))}>+</button>
+                                    <button id="cartMinusButton" className="cartPlusMinusButtons" onClick={()=>dispatch(minusItem(list.name))}>-</button>
+                                  </div>
                                 </div>    
                     })
                 }       
@@ -35,7 +38,7 @@ function Cart() {
             }
             {cart.length !== 0 &&
                  <>
-                    <div>Total Amount To Pay : {totalPrice} Rs</div>
+                    <div>Total Amount To Pay : {tp} Rs</div>
                     <div style={{display:"flex",justifyContent:"center",marginTop:"20px",marginBottom:"20px"}}>
                          <button onClick={()=>{
                             navigate("/pp")
