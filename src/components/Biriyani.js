@@ -30,7 +30,7 @@ function Biriyani(props) {
                                     {
                                     return <p style={{marginRight:"10px"}}>Added : {a.count}</p>
                                     }
-                                    
+                                    return null
                                 })
                             }
                         {
@@ -44,6 +44,7 @@ function Biriyani(props) {
                                     }}>Add Another One</button>
                                 }
                                 }
+                                return null
                             }) 
                         }
                         {
@@ -66,7 +67,7 @@ function Biriyani(props) {
                                     {
                                     return <p style={{marginRight:"10px"}}>Added : {a.count}</p>
                                     }
-                                    
+                                    return null
                                 })
                             }
                         {
@@ -80,6 +81,7 @@ function Biriyani(props) {
                                     }}>Add Another One</button>
                                 }
                                 }
+                                return null
                             }) 
                         }
                         {
