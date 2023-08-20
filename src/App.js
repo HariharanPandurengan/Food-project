@@ -28,6 +28,7 @@ function App() {
   useEffect(()=>{
     document.title = "Food_App"
   })
+  
 
   const Items = [
   {
@@ -37,7 +38,7 @@ function App() {
     amount:150,
     type:"breakfast",
     varientName:"pizza",
-    count:1
+    count:0
   },
   {
     name:"Chicken Pizza",
@@ -46,7 +47,7 @@ function App() {
     amount:200,
     type:"breakfast",
     varientName:"pizza",
-    count:1
+    count:0
   },
   {
     name:"Pongal",
@@ -54,7 +55,7 @@ function App() {
     img:Pongal,
     amount:70,
     type:"breakfast",
-    count:1
+    count:0
   },
   {
     name:"Vada",
@@ -62,7 +63,7 @@ function App() {
     img:Vada,
     amount:20,
     type:"breakfast",
-    count:1
+    count:0
   },
   {
     name:"Chicken Buruger",
@@ -71,7 +72,7 @@ function App() {
     amount:200,
     type:"snacks",
     varientName:"burger",
-    count:1
+    count:0
   },
   {
     name:"Veg Buruger",
@@ -80,7 +81,7 @@ function App() {
     amount:100,
     type:"snacks",
     varientName:"burger",
-    count:1
+    count:0
   },
   {
     name:"Chicken Biriyani",
@@ -89,7 +90,7 @@ function App() {
     amount:250,
     type:"lunch",
     varientName:"biriyani",
-    count:1
+    count:0
   },
   {
     name:"Egg Biriyani",
@@ -98,7 +99,7 @@ function App() {
     amount:200,
     type:"lunch",
     varientName:"biriyani",
-    count:1
+    count:0
   },
   {
     name:"Veg Biriyani",
@@ -107,7 +108,7 @@ function App() {
     amount:150,
     type:"lunch",
     varientName:"biriyani",
-    count:1
+    count:0
   },
   {
     name:"Veg Meals",
@@ -115,7 +116,7 @@ function App() {
     img:Vegmeals,
     amount:200,
     type:"lunch",
-    count:1
+    count:0
   },
   {
     name:"Bread Omlete",
@@ -123,7 +124,7 @@ function App() {
     img:BreadOmlete,
     amount:150,
     type:"snacks",
-    count:1
+    count:0
   },
   {
     name:"Sandwich",
@@ -131,7 +132,7 @@ function App() {
     img:Sandwich,
     amount:120,
     type:"snacks",
-    count:1
+    count:0
   }]
 
      let S = Items.filter((list)=>

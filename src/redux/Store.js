@@ -12,26 +12,16 @@ const userSlice = createSlice({
     reducers:{
         foodData:(state,action)=>{
                 
-                if(!(state.value.map(list=>list.name).includes(action.payload.name)))
-                {
-                    state.count = state.value.length+1;
-                    state.value.push(action.payload);
-                    state.tp = state.value.reduce((a,b)=>{
-                        return a += b.count * b.amount;
-                    },0)
-                }
-                else{
-                    state.value.map(list=>{
-                        if(list.name.includes(action.payload.name))
-                        {
-                            list.count += 1;
-                            state.tp = state.value.reduce((a,b)=>{
-                                return a += b.count * b.amount;
-                            },0)
-                        }
-                        return list;
-                    })
-                }
+            const existingItem = state.value.find(list => list.name === action.payload.name);
+
+            if (!existingItem) {
+                state.value.push({ ...action.payload, count: 1 });
+            } else {
+                existingItem.count += 1;
+            }
+
+            state.count = state.value.length;
+            state.tp = state.value.reduce((a, b) => a + b.count * b.amount, 0);
         },
         clearCart:(state)=>{
             state.count = 0;
@@ -47,7 +37,6 @@ const userSlice = createSlice({
                }
                if(list.count === 0){
                 state.value = state.value.filter(obj => obj.name !== list.name);
-                console.log(state.value)
                 state.count = state.value.length;
                }
                return list
